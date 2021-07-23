@@ -16,4 +16,9 @@ class DoggyController(val dogService: DogService) {
 
     @GetMapping("/{id}")
     fun getDog(@PathVariable id: String) = dogService.getDog(id)
+
+    @DeleteMapping("/{id}")
+    fun deleteDog(@PathVariable id: String){
+        dogService.removeDog(id)
+    }
 }

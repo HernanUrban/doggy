@@ -12,4 +12,7 @@ class DogService(val dogRepo: DogRepo) {
     fun createDog(dog: Dog) = dogRepo.save(dog)
 
     fun getDog(id: String) = dogRepo.findById(id)
+
+    fun removeDog(id: String) = dogRepo.deleteById(id)
+
 }
